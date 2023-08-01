@@ -1,19 +1,26 @@
 import "./App.css";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Welcome from "./components/Welcome.js";
 import StateComponent from "./components/StateComponent.js";
 import InputComponent from "./components/InputComponent.js";
 import ListComponent from "./components/ListComponent";
+import AxiosComponent from "./components/AxiosComponent";
 
 function App() {
   return (
-    <div className="App">
-      {/* <Welcome userName="양종욱" age={26}></Welcome>
-      <Welcome userName="김길동" age={20}></Welcome>
-      <StateComponent></StateComponent>
-      <hr></hr> */}
-      {/* <InputComponent></InputComponent> */}
-      <ListComponent></ListComponent>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={<Welcome userName="양종욱" age={26} />}
+        ></Route>
+        <Route path="/style" element={<StateComponent />}></Route>
+        <Route path="/input" element={<InputComponent />}></Route>
+        <Route path="/list" element={<ListComponent />}></Route>
+        <Route path="/axios" element={<AxiosComponent />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
