@@ -1,26 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Welcome from "./components/Welcome.js";
+import StateComponent from "./components/StateComponent.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-          <p>
-            <code>안녕하세요</code>
-          </p>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Welcome userName="양종욱" age={26}></Welcome>
+      <Welcome userName="김길동" age={20}></Welcome>
+      <StateComponent></StateComponent>
     </div>
   );
 }
