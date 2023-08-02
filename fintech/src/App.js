@@ -1,24 +1,19 @@
 import "./App.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Welcome from "./components/Welcome.js";
-import StateComponent from "./components/StateComponent.js";
-import InputComponent from "./components/InputComponent.js";
-import ListComponent from "./components/ListComponent";
-import AxiosComponent from "./components/AxiosComponent";
+import NewsPage from "./pages/NewsPage";
+import AuthPage from "./pages/AuthPage";
+import AuthResultPage from "./pages/AuthResultPage";
+import MainPage from "./pages/MainPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/"
-          element={<Welcome userName="양종욱" age={26} />}
-        ></Route>
-        <Route path="/style" element={<StateComponent />}></Route>
-        <Route path="/input" element={<InputComponent />}></Route>
-        <Route path="/list" element={<ListComponent />}></Route>
-        <Route path="/axios" element={<AxiosComponent />}></Route>
+        {/* <Route path="/" element={<NewsPage></NewsPage>}></Route> */}
+        <Route path="/" element={<AuthPage />}></Route>
+        <Route path="/main" element={<MainPage />}></Route>
+        <Route path="/authResult" element={<AuthResultPage />}></Route>
       </Routes>
     </BrowserRouter>
   );
